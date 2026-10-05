@@ -18,7 +18,7 @@ Make an empty folder, for example `Documents\lab`. In Codex: **Add new project**
 
 ```text
 This is a classroom lab. Check whether git works (git --version). If it does not, stop and tell me; do not install anything.
-If it works, clone https://github.com/[your-username]/agent-lab-w05.git into this folder.
+If it works, clone https://github.com/[your-username]/agent-lab-w05.git into this empty folder itself (git clone <url> .), so this folder becomes the repository.
 In that repository only, set user.name to [your-username] and user.email to [your-username]@users.noreply.github.com.
 Then tell me the full path of practice/01-club-files.
 ```
@@ -28,8 +28,8 @@ No git on this computer? Use the web route in section 4.
 
 ## 3 Commit and push after every task（每做完一題就 commit＋push）
 
-Do tasks A, B and D on the website. Use the full paths inside your cloned repo. After each one, paste:
-照網站做 A、B、D，路徑用 clone 下來那份裡面的。每做完一題貼這段：
+Do tasks A, B and D on the website in this same Codex project. Use the full paths inside your repo; card B has no path, so start it with one line: `Work in [full path of practice/02-campus-picker].` After each task, paste:
+照網站做 A、B、D，都在同一個 Codex 專案裡，路徑用 repo 裡面的；B 卡沒有路徑，第一行先加 `Work in [02-campus-picker 的完整路徑].`。每做完一題貼這段：
 
 ```text
 Commit only the files for this task with the message "[message]", then push to origin. Show me the commit.
