@@ -753,7 +753,18 @@
       }
 
       state.noMatchFound = false;
-      const picked = matches[Math.floor(Math.random() * matches.length)];
+
+      // B v2 Revision: Prevent consecutive duplicate picks when multiple candidates exist
+      let candidatesPool = matches;
+      if (matches.length > 1 && state.history.length > 0) {
+        const lastPickedId = state.history[0].id;
+        const filteredPool = matches.filter(item => item.id !== lastPickedId);
+        if (filteredPool.length > 0) {
+          candidatesPool = filteredPool;
+        }
+      }
+
+      const picked = candidatesPool[Math.floor(Math.random() * candidatesPool.length)];
       state.lastResult = picked;
 
       // Add to front of history, keep up to 5 items
